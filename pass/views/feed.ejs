@@ -1,0 +1,14 @@
+<% include ./partials/header.ejs %>
+    <div class="container mt-3 d-flex" >
+      <% AllUser.forEach(function(user){ %>
+        <div class="card m-2" style="width: 18rem;">
+            <img src="<%=user.image%>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%=user.username%></h5>
+              <p class="card-text"><%=user.email%></p>
+              <a href="/like/<%=user._id%>" class="btn btn-primary">like <%=user.like.length%></a>
+            </div>
+          </div>
+          <% })%>
+       </div>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,32 @@
+<% include ./partials/header.ejs %>
+  <form id="hidden" action="/uploads" method="post" enctype="multipart/form-data">
+    <input id="fileinp"  type="file" name="filename" placeholder="Choose Photo">
+    <input id="fileSub" type="submit">
+  </form>
+  <div class="container mt-3">
+    <div class="card" style="width: 18rem;">
+      <div class="pen">
+        <i class="ri-pencil-line"></i>
+      </div>
+      <img id="image" src="../images/uploads/<%=user.image%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%=user.username%>
+        </h5>
+        <p class="card-text">
+          <%=user.email%>
+        </p>
+        <a href="/like/<%=user._id%>" class="btn btn-primary">like <%=user.like.length%></a>
+      </div>
+    </div>
+  </div>
+  <script>
+     document.querySelector(".pen").addEventListener("click",function(){
+      document.querySelector("#fileinp").click();
+    });
+    document.querySelector("#fileinp").addEventListener("change",function(){
+      document.querySelector("#fileSub").click();
+    });
+</script>
+
+<% include ./partials/footer.ejs %>

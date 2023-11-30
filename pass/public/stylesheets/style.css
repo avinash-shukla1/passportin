@@ -1,0 +1,28 @@
+#hidden{
+    display: none;
+}
+.pen{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 22%;
+    top: 47%;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(41, 41, 255);
+    border-radius: 50%;
+    color: #fff;
+}
+.card{
+    align-items: center;
+    border: none !important;
+    overflow: hidden;
+}
+.card img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
